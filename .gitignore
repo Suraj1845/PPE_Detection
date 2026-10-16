@@ -1,0 +1,52 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python caches and build outputs
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Logs, recordings and temporary outputs (Samples/ is tracked)
+*.log
+logs/
+output/
+outputs/
+/*.mp4
+/*.avi
+*.tmp
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Model artifacts: the approved ONNX models in models/ are tracked (see models/SHA256SUMS).
+# Everything else stays local until its licence is verified and recorded in MODEL_LICENSES.md.
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+models/*.onnx
+!models/dfine_n_coco.onnx
+!models/dfine_s_coco.onnx
+
+# Training kit: downloaded D-FINE source and weights, prepared data, runs (all regenerated)
+training/D-FINE/
+training/weights/
+training/work/
+
+# IDE (user-specific)
+.idea/workspace.xml
+.idea/shelf/
+.vscode/
+Samples/

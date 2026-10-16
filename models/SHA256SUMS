@@ -1,0 +1,5 @@
+# Approved model artifacts: <sha256>  <filename>
+# Only add a file here after its licence and provenance are recorded in MODEL_LICENSES.md.
+# ppe.pt is deliberately NOT listed (UNVERIFIED; Ultralytics-derived).
+567fa8997efd52d463adcf0570395a86cef0b79ad69f735f27cce23ed64239a5  dfine_n_coco.onnx
+3af4bf499e26f254bda0538d1c075b156893828b40781e1f72a1ced7ad7c1deb  dfine_s_coco.onnx

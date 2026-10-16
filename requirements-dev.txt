@@ -1,0 +1,7 @@
+# Test tools, installed on top of one runtime requirements file.
+pytest==9.1.1
+# transitive
+colorama==0.4.6 ; sys_platform == "win32"
+iniconfig==2.3.1
+pluggy==1.6.0
+pygments==2.21.0

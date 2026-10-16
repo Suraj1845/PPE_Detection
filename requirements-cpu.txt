@@ -1,0 +1,11 @@
+# Runtime dependencies - CPU ONLY (for machines without a supported GPU). Use INSTEAD of requirements.txt,
+# in a fresh .venv, and run the app with --device cpu. Python 3.12, Windows x64 / Linux x64.
+# The onnxruntime packages conflict with each other; never install two of them into one .venv.
+# Fully pinned (direct + transitive), resolved with `uv pip compile --python-version 3.12 --python-platform x86_64-pc-windows-msvc`.
+onnxruntime==1.30.0
+opencv-python==4.14.0.94
+numpy==2.5.3
+# transitive
+flatbuffers==25.12.19
+packaging==26.3
+protobuf==7.36.2

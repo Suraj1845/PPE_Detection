@@ -1,0 +1,21 @@
+# Runtime dependencies - DEFAULT: NVIDIA GPU via CUDA 13 (e.g. RTX 5070). Python 3.12, Windows x64 / Linux x64.
+# Needs an NVIDIA driver that supports CUDA 13.x. The CUDA/cuDNN runtime comes from the nvidia-* wheels below
+# (about 1.2 GB on Windows); no separate CUDA Toolkit install is needed. These wheels are NVIDIA proprietary
+# software, not open source - see THIRD_PARTY_NOTICES.md.
+# Alternatives (install INSTEAD of this file, in a fresh .venv): requirements-directml.txt (AMD/Intel/other
+# DirectX 12 GPUs on Windows) or requirements-cpu.txt (no GPU). The onnxruntime packages conflict with each other.
+# onnxruntime-gpu also contains the CPU provider, so --device cpu still works with this file.
+onnxruntime-gpu[cuda,cudnn]==1.30.0
+opencv-python==4.14.0.94
+numpy==2.5.3
+# transitive
+flatbuffers==25.12.19
+packaging==26.3
+protobuf==7.36.2
+nvidia-cublas==13.8.0.4
+nvidia-cuda-nvrtc==13.4.92
+nvidia-cuda-runtime==13.4.92
+nvidia-cudnn-cu13==9.27.0.42
+nvidia-cufft==12.4.0.43
+nvidia-curand==10.4.4.72
+nvidia-nvjitlink==13.4.92

@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ppe-detection"
+dynamic = ["version"]
+description = "Real-time PPE detection from a webcam with D-FINE ONNX models and ONNX Runtime"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+authors = [{ name = "Addsoft Technologies Limited" }]
+# Runtime dependencies are pinned in requirements*.txt (CPU, CUDA or DirectML flavour of
+# ONNX Runtime); only one flavour may be installed, so none is declared here.
+# The app is run from the project folder (python -m ppe_detection) because models/ lives next to
+# the package; it is not meant to be pip-installed into site-packages.
+dependencies = []
+
+[tool.setuptools]
+packages = ["ppe_detection"]
+
+[tool.setuptools.dynamic]
+version = { attr = "ppe_detection.__version__" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra"
+markers = [
+    "model: runs the real ONNX model from models/ (no camera needed; skipped if the file is missing)",
+    "gpu: needs a working CUDA GPU (skipped otherwise)",
+]
